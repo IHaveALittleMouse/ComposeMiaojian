@@ -31,9 +31,7 @@ fun MiaoTopBar(title: String, onBack: (() -> Unit)? = null) {
                     painterResource(R.drawable.ic_discovery_outlined),
                     contentDescription = "back",
                     Modifier
-                        .clickable {
-                            onBack.invoke()
-                        }
+                        .clickable(onClick = onBack)
                         .align(Alignment.CenterVertically)
                         .size(36.dp)
                         .padding(8.dp),

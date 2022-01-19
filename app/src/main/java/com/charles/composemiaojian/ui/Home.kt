@@ -15,7 +15,10 @@ import com.google.accompanist.pager.HorizontalPager
 fun Home(viewModel: MiaoViewModel) {
     ComposeMiaojianTheme(viewModel.theme) {
         Column {
-            HorizontalPager(count = 4) { page ->
+            HorizontalPager(
+                count = 4,
+                Modifier.weight(1f)
+            ) { page ->
                 when (page) {
                     0 -> ChatList(viewModel.chats)
                     1 -> Box(Modifier.fillMaxSize())

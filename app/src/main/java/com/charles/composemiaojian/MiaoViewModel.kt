@@ -66,4 +66,8 @@ class MiaoViewModel : ViewModel() {
             false -> false
         }
     }
+
+    fun boom(chat: Chat) {
+        chat.msgs.add(Msg(User.Me, text = "\uD83D\uDCA3", time = "15:10").apply { read = true })
+    }
 }
